@@ -20,7 +20,7 @@
   box-sizing: border-box;
 }
 
-header, h1, nav, .player-information {
+body {
   font-family: 'Kaushan Script', cursive, sans-serif;
 }
 
@@ -28,6 +28,13 @@ header, h1, nav, .player-information {
   content: "";
   display: block;
   clear: both;
+}
+
+body {
+  background-image: url('football.jpg');
+  background-size: cover;
+  background-color:rgba(255,255,255,0.5);
+  background-blend-mode:lighten;
 }
 
 header {
@@ -40,6 +47,7 @@ header {
 
 header .headline {
   font-size: 32px;
+  text-decoration: underline;
 }
 
 nav {
@@ -58,12 +66,42 @@ nav {
 .nav-list-item {
   list-style: none;
   display: inline-block;
-  margin: 0 20px;
+  margin: 0 40px;
+  font-size: 20px;
+}
+
+/* Slideshow */
+
+#container{
+  height: 500px;
+  margin-top: 20px;
+}
+
+#slideshow {
+  background-size: cover;
+  border: 10px solid green;
+}
+
+.image1 {
+  background-image: url(image1.jpg);
+}
+.image2 {
+  background-image: url(image2.jpg);
+}
+.image3 {
+  background-image: url(image3.jpg);
+}
+
+/* Main */
+
+main .headline {
+  text-align: center;
+  text-decoration: underline;
 }
 
 main {
   width: 880px;
-  margin: 0 auto;
+  margin: 15px auto;
 }
 
 .player-box {
@@ -72,6 +110,7 @@ main {
   margin: 10px;
   float: left;
   position: relative;
+  text-align: center;
 }
 
 .player-information {
@@ -79,6 +118,11 @@ main {
   position: absolute;
   left: 0;
   bottom: 0;
+}
+
+.player-image {
+  border-radius: 50%;
+  border: 5px solid green;
 }
 
 .player-name {
@@ -91,9 +135,32 @@ main {
 
 .player-team {
   display: block;
-  color: gray;
+  color: black;
   font-size: 12px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.model {
+  text-decoration: underline;
+  margin-top: 10px;
+}
+
+/* Show.html.erb  */
+
+.left-content {
+  width: 50%;
+  float: left;
+}
+
+.right-content {
+  width: 50%;
+  float: right;
+  padding-top: 50px;
+}
+
+.action {
+  font-size: 20px;
+  margin: 0 10px;
 }

@@ -1,7 +1,7 @@
-<h1>Player List</h1>
+<h1 class="headline">Player List</h1>
 <% @players.each do |player| %>
   <div class="player-box">
-    <%= attachment_image_tag player, :image, :fill, 200, 200, format: 'jpeg' %>
+    <%= attachment_image_tag player, :image, :fill, 200, 200, format: 'jpeg', class:"player-image" %>
     <div class="player-information">
       <span class="player-name"><%= link_to player.name, player_path(player.id) %></span>
       <span class="player-team"><%= player.team %></span>

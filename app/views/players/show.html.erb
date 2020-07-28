@@ -1,15 +1,19 @@
-<h2>Name</h2>
-<p><%= @player.name %></p>
-<h2>Image</h2>
-<%= attachment_image_tag @player, :image, :fill, 300, 300, format: 'jpeg' %>
-<h2>Age</h2>
-<p><%= @player.age %></p>
-<h2>Team</h2>
-<p><%= @player.team %></p>
-<h2>Nationality</h2>
-<p><%= @player.nationality %></p>
-<h2>Position</h2>
-<p><%= @player.position %></p>
-
-<%= link_to "Edit", edit_player_path(@player.id) %>
-<%= link_to "Delete", destroy_player_path(@player.id), method: :delete, "data-confirm" => "本当に消しますか？" %>
+<div class="left-content">
+  <p class="model">Name</p>
+  <h2><%= @player.name %></h2>
+  <p class="model">Image</p>
+  <%= attachment_image_tag @player, :image, :fill, 300, 300, format: 'jpeg', class:"player-image" %>
+</div>
+<div class="right-content">
+  <p class="model">Age</p>
+  <h2><%= @player.age %></h2>
+  <p class="model">Team</p>
+  <h2><%= @player.team %></h2>
+  <p class="model">Nationality</p>
+  <h2><%= @player.nationality %></h2>
+  <p class="model">Position</p>
+  <h2><%= @player.position %></h2>
+  <br>
+  <%= link_to "Edit", edit_player_path(@player.id), class:"action" %>
+  <%= link_to "Delete", destroy_player_path(@player.id), method: :delete, "data-confirm" => "本当に消しますか？", class:"action" %>
+</div>
