@@ -1,0 +1,17 @@
+<h1>New Player</h1>
+<%= form_for(@player, url: '/players') do |f| %>
+  <h4>Name</h4>
+  <%= f.text_field :name %>
+  <h4>Image</h4>
+  <%= f.attachment_field :image %>
+  <h4>Age</h4>
+  <%= f.number_field :age %>
+  <h4>Team</h4>
+  <%= f.text_field :team, min:16, max:60 %>
+  <h4>Nationality</h4>
+  <%= f.text_field :nationality %>
+  <h4>Position</h4>
+  <%= f.select :position, ['FW','MF','DF','GK'],{include_blank:'Please select'} %>
+  <br>
+  <%= f.submit 'Post' %>
+<% end %>

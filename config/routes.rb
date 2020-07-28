@@ -1,3 +1,12 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+  get 'players/new'
+  get 'top' => 'homes#top'
+  post 'players' => 'players#create'
+  get 'players' => 'players#index'
+  get 'players/:id' => 'players#show', as: 'player'
+  get 'players/:id/edit' => 'players#edit', as: 'edit_player'
+  patch 'players/:id' => 'players#update', as: 'update_player'
+  delete 'players/:id' => 'players#destroy', as: 'destroy_player'
+  
 end

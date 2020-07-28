@@ -1,0 +1,15 @@
+<h2>Name</h2>
+<p><%= @player.name %></p>
+<h2>Image</h2>
+<%= attachment_image_tag @player, :image, :fill, 300, 300, format: 'jpeg' %>
+<h2>Age</h2>
+<p><%= @player.age %></p>
+<h2>Team</h2>
+<p><%= @player.team %></p>
+<h2>Nationality</h2>
+<p><%= @player.nationality %></p>
+<h2>Position</h2>
+<p><%= @player.position %></p>
+
+<%= link_to "Edit", edit_player_path(@player.id) %>
+<%= link_to "Delete", destroy_player_path(@player.id), method: :delete, "data-confirm" => "本当に消しますか？" %>
