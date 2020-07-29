@@ -11,7 +11,7 @@ class PlayersController < ApplicationController
   end
   
   def index
-    @players = Player.all
+    @players = Player.page(params[:page]).reverse_order
   end
   
   def show

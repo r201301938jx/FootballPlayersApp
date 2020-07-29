@@ -1,4 +1,4 @@
-<h1 class="headline">Player List</h1>
+<h1 class="headline"><i class="fas fa-running"></i>  Player List</h1>
 <% @players.each do |player| %>
   <div class="player-box">
     <%= attachment_image_tag player, :image, :fill, 200, 200, format: 'jpeg', class:"player-image" %>
@@ -8,3 +8,4 @@
     </div>
   </div>
 <% end %>
+<%= paginate @players %>

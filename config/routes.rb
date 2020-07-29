@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
+  root 'homes#top'
   get 'players/new'
-  get 'top' => 'homes#top'
   post 'players' => 'players#create'
   get 'players' => 'players#index'
   get 'players/:id' => 'players#show', as: 'player'
